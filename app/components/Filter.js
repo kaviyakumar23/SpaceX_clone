@@ -7,23 +7,25 @@ import { useEffect, useState } from "react";
 const Filter = (props) => {
   const [filter, setFilter] = useState("All Launches");
   const [dateFilter, setDateFilter] = useState("All Dates");
-  const { launchData, setLaunchData } = props;
+  const { launchData, setLaunchData, allLaunches } = props;
+
   useEffect(() => {
     filterLaunches();
   }, [filter, dateFilter]);
 
-  //   useEffect(() => {
-  //     filterByDate();
-  //   }, [dateFilter]);
-
   const filterLaunches = () => {
-    let launchDataCopy = [...launchData];
+    let launchDataCopy = [...allLaunches];
+    console.log(launchDataCopy);
     switch (filter) {
+      case "All Launches":
+        launchData;
+        break;
       case "Upcoming Launches":
         launchDataCopy = launchDataCopy.filter((item) => item.upcoming);
         break;
       case "Successful Launches":
         launchDataCopy = launchDataCopy.filter((item) => item.launch_success);
+        console.log(launchDataCopy);
         break;
       case "Failed Launches":
         launchDataCopy = launchDataCopy.filter(
@@ -33,7 +35,7 @@ const Filter = (props) => {
       default:
         launchDataCopy;
     }
-
+    console.log(launchDataCopy);
     const now = moment();
     let startDate;
     let filteredLaunches;
@@ -63,6 +65,10 @@ const Filter = (props) => {
         break;
       case "Last 15 years":
         startDate = now.clone().subtract(15, "years");
+        filterFunction();
+        break;
+      case "Last 20 years":
+        startDate = now.clone().subtract(20, "years");
         filterFunction();
         break;
       case "All Dates":
@@ -95,6 +101,7 @@ const Filter = (props) => {
           <option>Last 10 years</option>
           <option>Last 12 years</option>
           <option>Last 15 years</option>
+          <option>Last 20 years</option>
         </select>
       </div>
 

@@ -13,6 +13,7 @@ import Pagination from "./Pagination";
 
 const Body = () => {
   const [launchData, setLaunchData] = useState([]);
+  const [allLaunches, setAllLaunches] = useState([]);
   const [currentPageData, setCurrentPageData] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [eachShowModal, setEachShowModal] = useState(null);
@@ -28,6 +29,7 @@ const Body = () => {
     const data = await fetch("https://api.spacexdata.com/v3/launches");
     const jsonData = await data.json();
     setLaunchData(jsonData);
+    setAllLaunches(jsonData);
     setTableLoading(false);
   };
 
@@ -55,7 +57,11 @@ const Body = () => {
 
   return (
     <div className="dashboard">
-      <Filter launchData={launchData} setLaunchData={setLaunchData} />
+      <Filter
+        launchData={launchData}
+        setLaunchData={setLaunchData}
+        allLaunches={allLaunches}
+      />
       <div className="tableWrapper">
         <table className="tableDesign">
           <thead className="tableHeader">
