@@ -4,7 +4,16 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build index.html"
+  },
+  "targets": {
+    "main": {
+      "source": "src/index.js",
+      "distDir": "dist",
+      "publicUrl": "./",
+      "outputFormat": "esmodule"
+    }
   },
   "author": "",
   "license": "ISC",
