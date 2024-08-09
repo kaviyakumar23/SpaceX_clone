@@ -1,19 +1,10 @@
 {
   "name": "spacex",
   "version": "1.0.0",
-  "main": "index.js",
   "scripts": {
     "dev": "parcel index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build index.html"
-  },
-  "targets": {
-    "main": {
-      "source": "src/index.js",
-      "distDir": "dist",
-      "publicUrl": "./",
-      "outputFormat": "esmodule"
-    }
+    "build": "parcel build index.html --dist-dir dist"
   },
   "author": "",
   "license": "ISC",
