@@ -1,0 +1,100 @@
+.modalContent {
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+}
+.gridStart img {
+  width: 100px;
+}
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.logoLink {
+  width: 15px;
+}
+.gridMiddle {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  color: rgb(71, 71, 71);
+}
+.missionName {
+  font-size: 18px;
+  margin-bottom: 0px;
+  color: rgb(71, 71, 71);
+}
+.rocketName {
+  font-size: 12px;
+}
+.gridEnd {
+  font-size: 18px;
+}
+.missionDetails {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0px;
+}
+.missionDetails td {
+  border-bottom: 1px solid gray;
+  padding: 20px;
+}
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+.pagination button {
+  margin: 0 5px;
+  padding: 5px 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.tableDesign {
+  width: 80%;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: #4b5563;
+  font-family: sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 80vh;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tableHeader {
+  background-color: rgb(236, 234, 233);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+th,
+td {
+  padding: 20px, 40px;
+}
+
+.tableHeader th {
+  font-weight: normal;
+  padding: 15px 10px;
+  text-align: left;
+}
+.tableBody tr:hover {
+  background-color: rgb(248, 245, 245);
+  cursor: pointer;
+}
+.tableBody td {
+  height: 5vh;
+  padding: 5px 10px;
+}
+.tableBody tr {
+  max-height: 50px;
+}
+.tableWrapper {
+  border-radius: 50px;
+  table-layout: auto;
+}

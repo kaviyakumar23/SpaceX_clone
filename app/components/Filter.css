@@ -1,0 +1,51 @@
+.filterContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.years {
+  padding: 0.5em;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  margin-top: 1px;
+  cursor: pointer;
+}
+.launches {
+  padding: 0.5em;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.calendarLogo {
+  height: 15px;
+  width: 15px;
+  border: none;
+  outline: none;
+  margin-top: 1px;
+  padding: 0.5em;
+}
+.yearFilter {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.filterLogo {
+  height: 15px;
+  width: 15px;
+  border: none;
+  outline: none;
+  margin-top: 1px;
+  padding: 0.5em;
+}
+.launchFilter {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
