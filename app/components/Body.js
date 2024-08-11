@@ -65,13 +65,13 @@ const Body = () => {
       <div className="tableWrapper">
         <table className="tableDesign">
           <thead className="tableHeader">
-            <th>No: </th>
-            <th>Launched (UTC)</th>
-            <th>Location</th>
-            <th>Mission</th>
-            <th>Orbit</th>
-            <th>Launch Status</th>
-            <th>Rocket</th>
+            <th className="no">No: </th>
+            <th className="launched">Launched (UTC)</th>
+            <th className="location">Location</th>
+            <th className="mission">Mission</th>
+            <th className="orbit">Orbit</th>
+            <th className="launchStatus">Launch Status</th>
+            <th className="rocket">Rocket</th>
           </thead>
 
           {tableLoading ? (

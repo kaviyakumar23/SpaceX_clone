@@ -83,8 +83,29 @@ td {
 
 .tableHeader th {
   font-weight: normal;
-  padding: 15px 10px;
+  padding: 15px 20px;
   text-align: left;
+}
+.tableHeader th.no {
+  width: 6%;
+}
+.tableHeader th.launched {
+  width: 21%;
+}
+.tableHeader th.location {
+  width: 17%;
+}
+.tableHeader th.mission {
+  width: 17%;
+}
+.tableHeader th.orbit {
+  width: 12%;
+}
+.tableHeader th.launchStatus {
+  width: 12%;
+}
+.tableHeader th.rocket {
+  width: 10%;
 }
 .tableBody tr:hover {
   background-color: rgb(248, 245, 245);
@@ -92,7 +113,7 @@ td {
 }
 .tableBody td {
   height: 5vh;
-  padding: 5px 10px;
+  padding: 5px 20px;
 }
 .tableBody tr {
   max-height: 50px;
