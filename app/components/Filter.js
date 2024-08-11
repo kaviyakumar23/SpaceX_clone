@@ -101,6 +101,7 @@ const Filter = (props) => {
           <option>Last 10 years</option>
           <option>Last 12 years</option>
           <option>Last 15 years</option>
+          <option>Last 20 years</option>
         </select>
       </div>
 
