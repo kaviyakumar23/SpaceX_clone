@@ -24,7 +24,14 @@
   color: #4b5563;
   font-family: sans-serif;
 }
-
+@media (max-width: 600px) {
+  .modal-content {
+    width: 80%;
+    height: 600px;
+    min-width: none;
+    overflow-y: scroll;
+  }
+}
 .close {
   position: absolute;
   top: 10px;

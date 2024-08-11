@@ -31,6 +31,9 @@
 .gridEnd {
   font-size: 18px;
 }
+.wikiContent {
+  text-align: justify;
+}
 .missionDetails {
   width: 100%;
   border-collapse: separate;
@@ -97,4 +100,11 @@ td {
 .tableWrapper {
   border-radius: 50px;
   table-layout: auto;
+}
+@media (max-width: 600px) {
+  .tableWrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 10px;
+  }
 }

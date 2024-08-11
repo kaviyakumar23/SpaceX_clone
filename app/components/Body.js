@@ -118,110 +118,101 @@ const Body = () => {
             </tbody>
           )}
         </table>
-        <Pagination
-          limit={10}
-          data={launchData}
-          setCurrentPageData={setCurrentPageData}
-        />
-        <Modal show={showModal} onClose={onClose}>
-          <div className="modalContent">
-            <div className="gridStart">
-              <img src={eachShowModal?.links?.mission_patch_small} />
-            </div>
-            <div className="gridMiddle">
-              <p className="missionName">{eachShowModal?.mission_name}</p>
+      </div>
+      <Pagination
+        limit={10}
+        data={launchData}
+        setCurrentPageData={setCurrentPageData}
+      />
+      <Modal show={showModal} onClose={onClose}>
+        <div className="modalContent">
+          <div className="gridStart">
+            <img src={eachShowModal?.links?.mission_patch_small} />
+          </div>
+          <div className="gridMiddle">
+            <p className="missionName">{eachShowModal?.mission_name}</p>
 
-              <p className="rocketName">{eachShowModal?.rocket?.rocket_name}</p>
-              <div className="logoContainer">
-                <a href={eachShowModal?.links?.article_link} target="_blank">
-                  <img className="logoLink" src={nasaLogo} alt="nasalogo"></img>
-                </a>
-                <a href={eachShowModal?.links?.wikipedia} target="_blank">
-                  <img className="logoLink" src={wikiLogo} alt="wikilogo"></img>
-                </a>
-                <a href={eachShowModal?.links?.video_link} target="_blank">
-                  <img
-                    className="logoLink"
-                    src={youtubeLogo}
-                    alt="youTubelogo"
-                  ></img>
-                </a>
-                <div />
-              </div>
-            </div>
-            <div className="gridEnd">
-              <p>
-                <Chip
-                  upcoming={eachShowModal?.upcoming}
-                  success={eachShowModal?.launch_success}
-                />
-              </p>
+            <p className="rocketName">{eachShowModal?.rocket?.rocket_name}</p>
+            <div className="logoContainer">
+              <a href={eachShowModal?.links?.article_link} target="_blank">
+                <img className="logoLink" src={nasaLogo} alt="nasalogo"></img>
+              </a>
+              <a href={eachShowModal?.links?.wikipedia} target="_blank">
+                <img className="logoLink" src={wikiLogo} alt="wikilogo"></img>
+              </a>
+              <a href={eachShowModal?.links?.video_link} target="_blank">
+                <img
+                  className="logoLink"
+                  src={youtubeLogo}
+                  alt="youTubelogo"
+                ></img>
+              </a>
+              <div />
             </div>
           </div>
-          <div>{loadPage ? <Spinner /> : <p>{wikiContent}</p>}</div>
-          <table className="missionDetails">
-            <tbody>
-              <tr>
-                <td>Flight Number</td>
-                <td>{eachShowModal?.flight_number}</td>
-              </tr>
-              <tr>
-                <td>Mission Name</td>
-                <td>{eachShowModal?.mission_name}</td>
-              </tr>
-              <tr>
-                <td>Rocket Type</td>
-                <td>{eachShowModal?.rocket?.rocket_type}</td>
-              </tr>
-              <tr>
-                <td>Rocket Name</td>
-                <td>{eachShowModal?.rocket?.rocket_name}</td>
-              </tr>
-              <tr>
-                <td>Manufacturer</td>
-                <td>
-                  {
-                    eachShowModal?.rocket?.second_stage?.payloads[0]
-                      ?.manufacturer
-                  }
-                </td>
-              </tr>
-              <tr>
-                <td>Nationality</td>
-                <td>
-                  {
-                    eachShowModal?.rocket?.second_stage?.payloads[0]
-                      ?.nationality
-                  }
-                </td>
-              </tr>
-              <tr>
-                <td>Launch Date</td>
-                <td>{eachShowModal?.launch_date_utc}</td>
-              </tr>
-              <tr>
-                <td>Payload Type</td>
-                <td>
-                  {
-                    eachShowModal?.rocket?.second_stage?.payloads[0]
-                      ?.payload_type
-                  }
-                </td>
-              </tr>
-              <tr>
-                <td>Orbit</td>
-                <td>
-                  {eachShowModal?.rocket?.second_stage?.payloads[0]?.orbit}
-                </td>
-              </tr>
-              <tr>
-                <td>Launch Site</td>
-                <td>{eachShowModal?.launch_site?.site_name}</td>
-              </tr>
-            </tbody>
-          </table>
-        </Modal>
-      </div>
+          <div className="gridEnd">
+            <p>
+              <Chip
+                upcoming={eachShowModal?.upcoming}
+                success={eachShowModal?.launch_success}
+              />
+            </p>
+          </div>
+        </div>
+        <div className="wikiContent">
+          {loadPage ? <Spinner /> : <p>{wikiContent}</p>}
+        </div>
+        <table className="missionDetails">
+          <tbody>
+            <tr>
+              <td>Flight Number</td>
+              <td>{eachShowModal?.flight_number}</td>
+            </tr>
+            <tr>
+              <td>Mission Name</td>
+              <td>{eachShowModal?.mission_name}</td>
+            </tr>
+            <tr>
+              <td>Rocket Type</td>
+              <td>{eachShowModal?.rocket?.rocket_type}</td>
+            </tr>
+            <tr>
+              <td>Rocket Name</td>
+              <td>{eachShowModal?.rocket?.rocket_name}</td>
+            </tr>
+            <tr>
+              <td>Manufacturer</td>
+              <td>
+                {eachShowModal?.rocket?.second_stage?.payloads[0]?.manufacturer}
+              </td>
+            </tr>
+            <tr>
+              <td>Nationality</td>
+              <td>
+                {eachShowModal?.rocket?.second_stage?.payloads[0]?.nationality}
+              </td>
+            </tr>
+            <tr>
+              <td>Launch Date</td>
+              <td>{eachShowModal?.launch_date_utc}</td>
+            </tr>
+            <tr>
+              <td>Payload Type</td>
+              <td>
+                {eachShowModal?.rocket?.second_stage?.payloads[0]?.payload_type}
+              </td>
+            </tr>
+            <tr>
+              <td>Orbit</td>
+              <td>{eachShowModal?.rocket?.second_stage?.payloads[0]?.orbit}</td>
+            </tr>
+            <tr>
+              <td>Launch Site</td>
+              <td>{eachShowModal?.launch_site?.site_name}</td>
+            </tr>
+          </tbody>
+        </table>
+      </Modal>
     </div>
   );
 };

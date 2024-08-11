@@ -2,11 +2,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #ddd;
   padding: 10px;
   border-radius: 4px;
 }
-
+@media (max-width: 600px) {
+  .paginate {
+    overflow-x: auto;
+    justify-content: unset;
+  }
+}
 .page-number,
 .pagination-button {
   padding: 8px 16px;
